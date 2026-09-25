@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { portfolioData } from '@/data/portfolioData';
+import { getDictionary } from '@/lib/dictionary';
 
-export default function ProjectsPage() {
+export default async function ProjectsPage({ dictionary, language = "en" }) {
+  dictionary = dictionary || await getDictionary(language);
   const { projects } = portfolioData;
+  const content = dictionary?.projectsPage || {};
+  const projectContent = dictionary?.projects?.items || {};
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white relative overflow-hidden">
@@ -30,22 +34,25 @@ export default function ProjectsPage() {
           {/* HEADER HALAMAN */}
           <div className="flex flex-col items-center text-center mb-12">
             <span className="bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full text-[10px] text-gray-300 font-medium tracking-wider mb-4 border border-white/20">
-              All My Works
+              {content.eyebrow || "All My Works"}
             </span>
-            <h1 className="text-4xl font-bold mb-6 drop-shadow-md">My Projects</h1>
+            <h1 className="text-4xl font-bold mb-6 drop-shadow-md">{content.title || "My Projects"}</h1>
             <div className="w-10 h-1 bg-pink-500 rounded-full mb-8"></div>
             
             <Link 
-              href="/" 
+              href={`/${language}`} 
               className="inline-flex items-center gap-2 bg-black/40 backdrop-blur-sm hover:bg-black/60 border border-white/10 px-6 py-2 rounded-full text-sm font-medium transition text-white"
             >
-              ← Back to Home
+              {content.backHome || "← Back to Home"}
             </Link>
           </div>
 
           {/* GRID PROJECT (3 Kolom) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects?.map((project, index) => (
+            {projects?.map((project, index) => {
+              const localizedProject = projectContent[project.title] || {};
+
+              return (
               <div key={index} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden flex flex-col hover:border-purple-400/50 transition duration-300 h-full shadow-lg">
                 
                 {/* Bagian Gambar */}
@@ -75,10 +82,9 @@ export default function ProjectsPage() {
                   
                   {/* Deskripsi */}
                   <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                    {project.description}
+                    {localizedProject.description || project.description}
                   </p>
 
-                  {/* Tombol Aksi */}
                   <div className="mt-auto pt-3 border-t border-white/10 flex items-center">
                     {project.link && (
                       <a 
@@ -87,13 +93,14 @@ export default function ProjectsPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-purple-400 hover:text-purple-300 text-sm font-medium transition"
                       >
-                        Live Demo →
+                        {content.liveDemo || "Live Demo"} →
                       </a>
                     )}
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
@@ -113,19 +120,19 @@ export default function ProjectsPage() {
                 />
               </div>
               <p className="text-white font-medium text-lg leading-tight drop-shadow-md">
-                Building <span className="text-orange-500">digital experiences</span> that matter.
+                {dictionary?.footer?.description || "Digital craft for modern product experiences."}
               </p>
             </div>
 
             {/* Tengah: Navigation & Links */}
             <div className="flex-1 w-full grid grid-cols-2 md:grid-cols-3 gap-10">
               <div>
-                <h4 className="font-semibold text-white mb-4 text-sm drop-shadow-md">Navigation</h4>
+                <h4 className="font-semibold text-white mb-4 text-sm drop-shadow-md">{content.navigation || "Navigation"}</h4>
                 <ul className="space-y-3 text-sm text-gray-400">
-                  <li><Link href="/" className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">About</Link></li>
-                  <li><Link href="/projects" className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">Project</Link></li>
-                  <li><Link href="/#blog" className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">Blog</Link></li>
-                  <li><Link href="/contact" className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">Contact</Link></li>
+                  <li><Link href={`/${language}#about`} className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{dictionary?.footer?.links?.about || "About"}</Link></li>
+                  <li><Link href={`/${language}/projects`} className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{content.project || "Project"}</Link></li>
+                  <li><Link href={`/${language}#blog`} className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{dictionary?.footer?.links?.blog || "Blog"}</Link></li>
+                  <li><Link href={`/${language}/contact`} className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{content.contact || "Contact"}</Link></li>
                 </ul>
               </div>
 
@@ -139,8 +146,8 @@ export default function ProjectsPage() {
               </div>
 
               <div>
-                <h4 className="font-semibold text-white mb-4 text-sm drop-shadow-md">Never Miss an Update</h4>
-                <p className="text-sm text-gray-400 leading-relaxed">Get an email when there's something new.</p>
+                <h4 className="font-semibold text-white mb-4 text-sm drop-shadow-md">{content.updatesTitle || "Never Miss an Update"}</h4>
+                <p className="text-sm text-gray-400 leading-relaxed">{content.updatesDescription || "Get an email when there's something new."}</p>
               </div>
             </div>
           </div>

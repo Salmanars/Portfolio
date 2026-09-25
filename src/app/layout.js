@@ -2,10 +2,27 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
 
 export const metadata = {
-  title: 'Salman Arya Sandytia | Portfolio',
-  description: 'Portfolio website of Salman Arya Sandytia, Software Engineering student and UI/UX enthusiast.',
+  metadataBase: new URL(siteUrl),
+  title: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA',
+  description: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA',
+  openGraph: {
+    title: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA',
+    description: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA',
+    type: 'website',
+    locale: 'id_ID',
+    images: [
+      {
+        url: '/section.png',
+        width: 1200,
+        height: 630,
+        alt: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA'
+      }
+    ]
+  }
 };
 
 export default function RootLayout({ children }) {

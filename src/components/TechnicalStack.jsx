@@ -1,7 +1,8 @@
 import { portfolioData } from "@/data/portfolioData";
 
 export default function TechStack() {
-  const { techStacks } = portfolioData;
+  const { skillCategories } = portfolioData;
+  const techStacks = skillCategories.flatMap((category) => category.skills);
 
   return (
     <section id="techstack" className="py-20 px-4 max-w-6xl mx-auto text-white">

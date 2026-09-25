@@ -1,18 +1,20 @@
 import { portfolioData } from "@/data/portfolioData";
 import { FaTrophy } from "react-icons/fa";
 
-export default function Achievements() {
+export default function Achievements({ dictionary }) {
   const data = portfolioData.achievements[0]; 
   const { certificates } = portfolioData;
+  const content = dictionary?.achievements || {};
+  const certificateContent = dictionary?.certificates || {};
 
   return (
     <section id="achievements" className="py-20 px-4 max-w-6xl mx-auto text-white">
       
       <div className="flex flex-col items-center text-center mb-16">
         <span className="bg-[#1e1e1e] px-4 py-1 rounded-full text-[10px] text-gray-400 font-medium tracking-wider mb-4 border border-white/5">
-          Recognition & Accomplishments
+          {content.eyebrow || "Recognition & Accomplishments"}
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold">Awards & Achievements</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">{content.title || "Awards & Achievements"}</h2>
         <div className="w-10 h-1 bg-pink-500 rounded-full mt-3"></div>
       </div>
 
@@ -43,7 +45,7 @@ export default function Achievements() {
 
         {/* KANAN: Daftar Pencapaian */}
         <div className="w-full lg:w-[65%] flex flex-col justify-center space-y-5">
-          {data.university.items.map((item, index) => (
+          {(content.items || data.university.items).map((item, index) => (
             <div key={index} className="flex items-start gap-4">
               <div className="mt-1 text-yellow-500 shrink-0 bg-[#2a2a2a] p-1.5 rounded-full">
                 <FaTrophy className="w-4 h-4" />
@@ -60,7 +62,7 @@ export default function Achievements() {
 
       {/* Proud Moment Foto */}
       <div className="bg-[#151515] border border-white/5 rounded-2xl p-8 flex flex-col items-center mb-16">
-        <p className="text-gray-400 text-sm mb-6 font-medium">{data.proudMoment.title}</p>
+        <p className="text-gray-400 text-sm mb-6 font-medium">{content.proudMoment || data.proudMoment.title}</p>
         
         <div className="w-full max-w-3xl rounded-xl overflow-hidden shadow-2xl border border-white/5">
           <img 
@@ -70,12 +72,12 @@ export default function Achievements() {
           />
         </div>
         
-        <p className="text-gray-300 text-sm mt-6 font-medium">{data.proudMoment.caption}</p>
+        <p className="text-gray-300 text-sm mt-6 font-medium">{content.caption || data.proudMoment.caption}</p>
       </div>
 
       {/* Sertifikat */}
       <div className="mt-16">
-        <h3 className="text-lg font-semibold text-center mb-8 text-gray-300">Extracurricular Certificates</h3>
+        <h3 className="text-lg font-semibold text-center mb-8 text-gray-300">{certificateContent.title || "Extracurricular Certificates"}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {certificates?.map((cert, index) => (
             <div key={index} className="bg-[#151515] border border-white/5 rounded-xl p-6 flex flex-col items-center text-center gap-4 hover:border-purple-500/30 transition duration-300">
@@ -85,7 +87,7 @@ export default function Achievements() {
               <h4 className="text-sm font-semibold text-white">{cert.title}</h4>
               <div className="w-full space-y-1 text-xs text-gray-400">
                 <p>{cert.issuer}</p>
-                <p>{cert.date}</p>
+                <p>{certificateContent.dates?.[cert.date] || cert.date}</p>
                 <p className="break-all text-gray-500">ID: {cert.certId}</p>
               </div>
               {cert.pdfPath ? (
@@ -95,11 +97,11 @@ export default function Achievements() {
                   rel="noopener noreferrer"
                   className="w-full mt-2 bg-[#222222] hover:bg-[#2a2a2a] text-gray-300 text-xs py-2 rounded-full transition border border-white/5"
                 >
-                  Verify
+                  {certificateContent.verify || "Verify"}
                 </a>
               ) : (
                 <span className="w-full mt-2 bg-[#1b1b1b] text-gray-600 text-xs py-2 rounded-full border border-white/5 cursor-not-allowed">
-                  Verify
+                  {certificateContent.verify || "Verify"}
                 </span>
               )}
             </div>

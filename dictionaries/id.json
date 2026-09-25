@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "logo": "salman_",
+    "menu": "MENU",
+    "close": "TUTUP",
+    "navigationIndex": "// indeks_navigasi",
+    "home": "Beranda",
+    "about": "Tentang",
+    "projects": "Proyek",
+    "contact": "Kontak",
+    "footer": "Salman Arya Sandytia / Full-Stack Engineer & CCNA"
+  },
+  "language": {
+    "label": "Bahasa",
+    "english": "EN",
+    "indonesian": "ID"
+  },
+  "hero": {
+    "welcome": "Selamat datang di Portofolio saya",
+    "title": "Siapa Saya?",
+    "role": "Cisco Certified Network Associate (CCNA)",
+    "contactCta": "Hubungi saya"
+  },
+  "about": {
+    "eyebrow": "Cerita Saya",
+    "title": "Tentang Saya",
+    "description": "Lulusan Teknik Komputer Universitas Diponegoro (IPK 3.59/4.00) dengan pengalaman praktis di bidang full-stack web development dan software delivery. Terampil dalam membangun aplikasi web yang scalable, mengintegrasikan API, serta menjaga keandalan sistem melalui engineering best practices. Memiliki kemampuan komunikasi yang kuat, cepat beradaptasi, dan terbiasa bekerja secara mandiri maupun tim.",
+    "labels": {
+      "name": "NAMA",
+      "email": "EMAIL",
+      "location": "LOKASI",
+      "availability": "KETERSEDIAAN"
+    },
+    "availability": "Terbuka untuk Magang",
+    "downloadResume": "Unduh Resume"
+  },
+  "techStack": {
+    "eyebrow": "[05 // KEMAMPUAN]",
+    "title": "Technical Stack",
+    "summary": "KATEGORI / SKILL",
+    "categoryLabels": {
+      "01": "Pengembangan Frontend",
+      "02": "Pengembangan Backend & API",
+      "03": "Keamanan & Penetration Testing",
+      "04": "Database & Sistem Relasional",
+      "05": "Pengembangan Mobile",
+      "06": "Pengembangan 3D & Virtual Reality",
+      "07": "Desain UI/UX & Prototyping",
+      "08": "Jaringan Komputer & IoT",
+      "09": "Analisis Data & Bahasa Pemrograman"
+    }
+  },
+  "projects": {
+    "eyebrow": "Beberapa karya terbaru saya",
+    "title": "Proyek Unggulan",
+    "filters": {
+      "all": "Semua",
+      "web": "Pengembangan Web",
+      "vr": "VR & 3D"
+    },
+    "items": {
+      "Klinik Pratama Diponegoro (DipoVerify)": {
+        "subtitle": "Fullstack Engineer (Berbasis Proyek)",
+        "description": "Merancang dan mengembangkan sistem surat keterangan medis digital berbasis web (DipoVerify) dengan kontrol akses multi-peran (Pasien, Admin Klinik, Dokter, Staf Akademik). Membangun portal reservasi responsif dan dasbor manajemen, mengintegrasikan mekanisme verifikasi hash SHA-256/blockchain untuk verifikasi dokumen yang tahan manipulasi."
+      },
+      "PT Duta Basis DataPrima": {
+        "subtitle": "IT Support & Pengembang VR (Magang)",
+        "description": "Merancang dan mengembangkan aplikasi Virtual Reality (VR) interaktif menggunakan Unity 3D untuk mensimulasikan lingkungan fisik lokasi dan tata letak fasilitas. Mengimplementasikan interaksi objek 360 derajat dan sistem navigasi pengguna untuk tur virtual real-time serta peninjauan aset fasilitas."
+      }
+    },
+    "viewAll": "Lihat Semua Proyek",
+    "noResults": "Tidak ada proyek dalam kategori ini."
+  },
+  "projectsPage": {
+    "eyebrow": "Semua Karya Saya",
+    "title": "Proyek Saya",
+    "backHome": "← Kembali ke Beranda",
+    "liveDemo": "Demo Langsung",
+    "navigation": "Navigasi",
+    "project": "Proyek",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "updatesTitle": "Jangan Lewatkan Pembaruan",
+    "updatesDescription": "Dapatkan email saat ada sesuatu yang baru."
+  },
+  "resumePage": {
+    "eyebrow": "Profil Profesional Saya",
+    "title": "Unduh Resume Saya",
+    "backHome": "← Kembali ke Beranda",
+    "preview": "Pratinjau CV",
+    "options": {
+      "summary": {
+        "title": "Ringkasan CV (1 Halaman)",
+        "description": "Versi ringkas satu halaman yang berfokus pada keahlian utama dan proyek unggulan. Sangat cocok untuk gambaran singkat.",
+        "download": "Unduh CV"
+      },
+      "detailed": {
+        "title": "CV Lengkap (Detail)",
+        "description": "Versi komprehensif yang mencakup seluruh proyek, pengalaman, dan pencapaian. Terbaik untuk peninjauan mendalam.",
+        "download": "Unduh CV Lengkap"
+      },
+      "transcript": {
+        "title": "Transkrip Akademik",
+        "description": "Catatan akademik resmi, termasuk laporan IPK kumulatif.",
+        "download": "IPK Kumulatif"
+      }
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Kontak →",
+    "title": "Kontak & Hubungi Saya",
+    "description": "Saya selalu terbuka untuk peluang baru, kolaborasi, atau sekadar berbincang ramah."
+  },
+  "achievements": {
+    "eyebrow": "Pengakuan & Prestasi",
+    "title": "Penghargaan & Prestasi",
+    "proudMoment": "Momen Membanggakan",
+    "caption": "Tim FishCoin Finalis Paper Ilmiah Gemastik 2024",
+    "items": [
+      "Finalis Gemastik 2024 Scientific Paper",
+      "Menunjukkan kerja sama tim yang kuat, kreativitas, dan penerapan praktis keterampilan pengembangan web dalam lingkungan yang kompetitif."
+    ]
+  },
+  "certificates": {
+    "title": "Sertifikat Ekstrakurikuler",
+    "verify": "Verifikasi",
+    "dates": {
+      "August 2024": "Agustus 2024",
+      "January 2024": "Januari 2024",
+      "January 2023": "Januari 2023"
+    }
+  },
+  "blog": {
+    "eyebrow": "DALAM PENGEMBANGAN",
+    "title": "Arsip Blog",
+    "description": "Blog ini sedang disiapkan. Artikel akan tersedia di sini setelah siap.",
+    "latestPosts": "Artikel Terbaru",
+    "articles": "Artikel",
+    "publishedOn": "Diterbitkan pada",
+    "readMore": "Baca Selengkapnya",
+    "searchPlaceholder": "Cari artikel...",
+    "empty": "Belum ada artikel yang tersedia."
+  },
+  "footer": {
+    "description": "Karya digital untuk pengalaman produk modern.",
+    "navigation": "Navigasi",
+    "link": "Tautan",
+    "updatesTitle": "Jangan Lewatkan Pembaruan",
+    "updatesDescription": "Dapatkan email saat ada sesuatu yang baru.",
+    "links": {
+      "about": "Tentang",
+      "projects": "Proyek",
+      "blog": "Blog",
+      "contact": "Kontak",
+      "resume": "Resume"
+    }
+  }
+}

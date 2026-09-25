@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { portfolioData } from "@/data/portfolioData";
 
-export default function About() {
+export default function About({ dictionary, language = "en" }) {
   const { about } = portfolioData;
+  const content = dictionary?.about || {};
+  const description = content.description || about.longBio;
 
   return (
     <section id="about" className="py-20 px-4 max-w-5xl mx-auto text-white antialiased">
@@ -10,9 +12,9 @@ export default function About() {
       {/* 1. HEADER DI TENGAH */}
       <div className="flex flex-col items-center text-center mb-12">
         <span className="bg-[#1e1e1e] px-4 py-1 rounded-full text-[10px] text-gray-400 font-medium tracking-wider mb-4 border border-white/5">
-          My personal story
+          {content.eyebrow || "My personal story"}
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">{content.title || "About Me"}</h2>
         <div className="w-10 h-1 bg-pink-500 rounded-full mt-3"></div>
       </div>
 
@@ -34,45 +36,40 @@ export default function About() {
         <div className="w-full lg:w-2/3 flex flex-col gap-6">
           
           {/* Teks Paragraf Panjang */}
-          <div className="text-gray-300 text-sm leading-7 space-y-4">
-            <p>
-              {about.longBio || "A fresh graduate in Computer Engineering from Diponegoro University with a strong academic record (GPA 3.59/4.00) and hands-on experience in full-stack web development and software delivery. Skilled in building scalable features, integrating services, and ensuring product reliability through good engineering practices."}
-            </p>
-            <p>
-              {about.longBio2 || "Strong communicator with a proven ability to learn new concepts quickly, working effectively both independently and in teams."}
-            </p>
+          <div className="text-gray-300 text-sm leading-7">
+            <p>{description}</p>
           </div>
 
           {/* Kartu Info Data Diri */}
           <div className="bg-[#151515] border border-white/5 rounded-xl p-6 grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
             
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Name</p>
+              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{content.labels?.name || "Name"}</p>
               <p className="text-white font-medium">{about.name || "Salman Arya Sandytia"}</p>
             </div>
             
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Email</p>
+              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{content.labels?.email || "Email"}</p>
               <p className="text-white font-medium">{about.email || "aryasandytia26@gmail.com"}</p>
             </div>
             
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Location</p>
+              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{content.labels?.location || "Location"}</p>
               <p className="text-white font-medium">{about.location || "Semarang, Jawa Tengah, Indonesia"}</p>
             </div>
             
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Availability</p>
-              <p className="text-white font-medium">{about.availability || "Open to Internship"}</p>
+              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{content.labels?.availability || "Availability"}</p>
+              <p className="text-white font-medium">{content.availability || about.availability || "Open to Internship"}</p>
             </div>
 
             {/* PERBAIKAN: Tombol Download Resume (Mengarah ke /resume) */}
             <div className="md:col-span-2 mt-2">
               <Link 
-                href="/resume"
+                href={`/${language}/resume`}
                 className="w-full bg-[#222222] hover:bg-[#2a2a2a] text-white text-sm font-medium py-3 rounded-xl border border-white/5 transition flex justify-center items-center gap-2 cursor-pointer"
               >
-                Download Resume 📥
+                {content.downloadResume || "Download Resume"} 📥
               </Link>
             </div>
 

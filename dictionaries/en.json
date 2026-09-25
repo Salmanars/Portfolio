@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "logo": "salman_",
+    "menu": "MENU",
+    "close": "CLOSE",
+    "navigationIndex": "// navigation_index",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "footer": "Salman Arya Sandytia / Full-Stack Engineer & CCNA"
+  },
+  "language": {
+    "label": "Language",
+    "english": "EN",
+    "indonesian": "ID"
+  },
+  "hero": {
+    "welcome": "Welcome to my Portfolio",
+    "title": "Who Is Me?",
+    "role": "Cisco Certified Network Associate (CCNA)",
+    "contactCta": "Get in touch"
+  },
+  "about": {
+    "description": "A Computer Engineering graduate from Diponegoro University (GPA 3.59/4.00) with hands-on experience in full-stack web development and software delivery. Skilled in architecting scalable web applications, integrating APIs, and ensuring system reliability through modern engineering practices. An adaptable team player with strong communication skills and a continuous learning mindset."
+  },
+  "techStack": {
+    "eyebrow": "[05 // CAPABILITIES]",
+    "title": "Technical Stack",
+    "summary": "CATEGORIES / SKILLS",
+    "categoryLabels": {
+      "01": "Frontend Engineering",
+      "02": "Backend & API Engineering",
+      "03": "Security & Penetration Testing",
+      "04": "Database & Relational Systems",
+      "05": "Mobile Development",
+      "06": "3D Development & Virtual Reality",
+      "07": "UI/UX Design & Prototyping",
+      "08": "Computer Networks & IoT",
+      "09": "Data Analysis & Programming Languages"
+    }
+  },
+  "projectsPage": {
+    "eyebrow": "All My Works",
+    "title": "My Projects",
+    "backHome": "← Back to Home",
+    "liveDemo": "Live Demo",
+    "navigation": "Navigation",
+    "project": "Project",
+    "blog": "Blog",
+    "contact": "Contact",
+    "updatesTitle": "Never Miss an Update",
+    "updatesDescription": "Get an email when there's something new."
+  },
+  "resumePage": {
+    "eyebrow": "My Professional Profile",
+    "title": "Download My Resume",
+    "backHome": "← Back to Home",
+    "preview": "CV Preview",
+    "options": {
+      "summary": {
+        "title": "Summary CV (1 Page)",
+        "description": "A concise, one-page version focusing on key skills and standout projects. Ideal for a quick overview.",
+        "download": "Download CV"
+      },
+      "detailed": {
+        "title": "Full CV (Detailed)",
+        "description": "The comprehensive version, including all projects, experiences, and achievements. Best for in-depth review.",
+        "download": "Download Full CV"
+      },
+      "transcript": {
+        "title": "Academic Transcripts",
+        "description": "Official academic records, including cumulative GPA report.",
+        "download": "Cumulative GPA"
+      }
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contact →",
+    "title": "Contact & Connect",
+    "description": "I'm always open to new opportunities, collaborations, or just a friendly chat."
+  },
+  "blog": {
+    "eyebrow": "UNDER CONSTRUCTION",
+    "title": "Blog Archive",
+    "description": "This blog is being prepared. Articles will be available here once they're ready.",
+    "latestPosts": "Latest Posts",
+    "articles": "Articles",
+    "publishedOn": "Published on",
+    "readMore": "Read More",
+    "searchPlaceholder": "Search articles...",
+    "empty": "No articles are available yet."
+  },
+  "footer": {
+    "description": "Digital craft for modern product experiences.",
+    "navigation": "Navigation",
+    "link": "Link",
+    "updatesTitle": "Never Miss an Update",
+    "updatesDescription": "Get an email when there's something new.",
+    "links": {
+      "about": "About",
+      "projects": "Project",
+      "blog": "Blog",
+      "contact": "Contact",
+      "resume": "Resume"
+    }
+  }
+}

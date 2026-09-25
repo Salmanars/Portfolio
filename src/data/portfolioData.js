@@ -13,17 +13,107 @@ export const portfolioData = {
 		availability: "Open to Internship",
 		tags: ["React", "Next.js", "UI/UX", "Laravel"]
 	},
-	techStacks: [
-		{ name: "Next.js", percentage: 90, icon: "next" },
-		{ name: "React.js", percentage: 88, icon: "react" },
-		{ name: "TypeScript", percentage: 85, icon: "ts" },
-		{ name: "JavaScript", percentage: 85, icon: "js" },
-		{ name: "Node.js & Express.js", percentage: 85, icon: "node" },
-		{ name: "Tailwind CSS & HTML/CSS", percentage: 88, icon: "tailwind" },
-		{ name: "MySQL & Database", percentage: 80, icon: "mysql" },
-		{ name: "Git & GitHub", percentage: 85, icon: "git" },
-		{ name: "C# & Unity 3D", percentage: 75, icon: "unity" },
-		{ name: "Python / Rest API", percentage: 70, icon: "python" }
+	skillCategories: [
+		{
+			number: "01",
+			label: "Frontend Engineering",
+			shortLabel: "FRONTEND ENGINEERING",
+			skills: [
+				{ name: "Next.js", percentage: 90, icon: "next" },
+				{ name: "React", percentage: 88, icon: "react" },
+				{ name: "TypeScript", percentage: 85, icon: "ts" },
+				{ name: "JavaScript", percentage: 85, icon: "js" },
+				{ name: "Tailwind CSS", percentage: 88, icon: "tailwind" },
+				{ name: "HTML", percentage: 88, icon: "html" },
+				{ name: "CSS", percentage: 82, icon: "css" },
+				{ name: "Laravel / PHP", percentage: 78, icon: "node" },
+				{ name: "Flutter", percentage: 70, icon: "react" },
+				{ name: "WordPress", percentage: 72, icon: "node" },
+				{ name: "jQuery", percentage: 72, icon: "js" }
+			]
+		},
+		{
+			number: "02",
+			label: "Backend & API Engineering",
+			shortLabel: "BACKEND & API ENGINEERING",
+			skills: [
+				{ name: "Node.js", percentage: 85, icon: "node" },
+				{ name: "Express.js", percentage: 85, icon: "express" },
+				{ name: "NestJS", percentage: 75, icon: "node" },
+				{ name: "Spring Boot (Java)", percentage: 70, icon: "node" },
+				{ name: "Golang", percentage: 68, icon: "node" },
+				{ name: "Laravel (PHP)", percentage: 78, icon: "node" },
+				{ name: "REST API & Hash Integration", percentage: 82, icon: "postman" }
+			]
+		},
+		{
+			number: "03",
+			label: "Security & Penetration Testing",
+			shortLabel: "SECURITY & PENETRATION TESTING",
+			skills: [
+				{ name: "Network Security & ACLs", percentage: 78, icon: "security" },
+				{ name: "VPN & IPsec", percentage: 72, icon: "security" },
+				{ name: "Layer 2 Security & Troubleshooting", percentage: 76, icon: "security" },
+				{ name: "Security Research", percentage: 70, icon: "security" }
+			]
+		},
+		{
+			number: "04",
+			label: "Database & Relational Systems",
+			shortLabel: "DATABASE & RELATIONAL SYSTEMS",
+			skills: [
+				{ name: "MySQL", percentage: 80, icon: "mysql" },
+				{ name: "Firebase", percentage: 72, icon: "database" }
+			]
+		},
+		{
+			number: "05",
+			label: "Mobile Development",
+			shortLabel: "MOBILE DEVELOPMENT",
+			skills: [
+				{ name: "Flutter", percentage: 70, icon: "react" }
+			]
+		},
+		{
+			number: "06",
+			label: "3D Development & Virtual Reality",
+			shortLabel: "3D DEVELOPMENT & VIRTUAL REALITY",
+			skills: [
+				{ name: "Unity 3D", percentage: 75, icon: "unity" },
+				{ name: "360° Object Interaction & VR Simulation", percentage: 72, icon: "unity" }
+			]
+		},
+		{
+			number: "07",
+			label: "UI/UX Design & Prototyping",
+			shortLabel: "UI/UX DESIGN & PROTOTYPING",
+			skills: [
+				{ name: "Figma", percentage: 78, icon: "figma" }
+			]
+		},
+		{
+			number: "08",
+			label: "Computer Networks & IoT",
+			shortLabel: "COMPUTER NETWORKS & IOT",
+			skills: [
+				{ name: "Cisco Networking / Cisco IOS", percentage: 78, icon: "network" },
+				{ name: "Enterprise Routing & Switching (OSPF, EIGRP, VLANs)", percentage: 76, icon: "network" },
+				{ name: "Network Automation & SDN (Python)", percentage: 70, icon: "network" },
+				{ name: "IoT Architecture & Sensors", percentage: 70, icon: "arduino" }
+			]
+		},
+		{
+			number: "09",
+			label: "Data Analysis & Programming Languages",
+			shortLabel: "DATA ANALYSIS & PROGRAMMING",
+			skills: [
+				{ name: "Python", percentage: 70, icon: "python" },
+				{ name: "Java", percentage: 70, icon: "node" },
+				{ name: "JavaScript", percentage: 85, icon: "js" },
+				{ name: "TypeScript", percentage: 85, icon: "ts" },
+				{ name: "C#", percentage: 75, icon: "csharp" }
+			]
+		}
 	],
 	projects: [
 		{
