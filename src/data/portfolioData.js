@@ -133,6 +133,15 @@ export const portfolioData = {
 			tags: ["Unity 3D", "C#", "Virtual Reality", "3D Interaction"],
 			link: "",
 			github: "https://github.com/salmanars"
+		},
+		{
+			title: "Portfolio Saddam Saktya",
+			subtitle: "Frontend Developer (Freelance / Client Project)",
+			description: "Designed and developed a responsive portfolio website for Saddam Saktya using Next.js, React.js, and Tailwind CSS.",
+			imageUrl: "/images/Porto Project Web 1.jpg",
+			tags: ["Next.js", "React.js", "Tailwind CSS"],
+			link: "https://saddamsaktya.vercel.app/",
+			github: "https://github.com/Salmanars/Portfolio-Saddam---FIver"
 		}
 	],
 	sectionTitles: {

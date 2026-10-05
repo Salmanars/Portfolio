@@ -69,7 +69,7 @@ export default function FeaturedProjects({ dictionary }) {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
-        className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
       >
         {displayedProjects?.map((project, index) => {
           const localizedProject = content.items?.[project.title] || {};
@@ -81,17 +81,31 @@ export default function FeaturedProjects({ dictionary }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="flex h-full flex-col gap-6"
+              className="flex h-full flex-col justify-between gap-5"
             >
+              {/* BAGIAN GAMBAR */}
+              <div className="w-full overflow-hidden rounded-2xl border-t-4 border-purple-500 bg-white p-3 shadow-2xl sm:p-4">
+                <div className="aspect-video w-full overflow-hidden rounded-xl bg-gray-100 shadow-sm">
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
               {/* BAGIAN TEKS */}
-              <div className="flex w-full flex-1 flex-col gap-4">
-                <h3 className="text-2xl font-bold text-white lg:text-3xl">{project.title}</h3>
-                <p className="text-green-400 text-sm font-medium">
+              <div className="flex w-full flex-1 flex-col gap-3">
+                <h3 className="line-clamp-2 min-h-[3.5rem] text-2xl font-bold text-white lg:text-3xl">
+                  {project.title}
+                </h3>
+                <p className="line-clamp-2 min-h-[2.5rem] text-sm font-medium text-green-400">
                   {localizedProject.subtitle || project.subtitle}
                 </p>
                 
                 {/* Badges Teknologi */}
-                <div className="flex flex-wrap gap-2 mt-2">
+                <div className="flex min-h-[5.5rem] flex-wrap content-start gap-2">
                   {project.tags?.map((tag, i) => (
                     <span key={i} className="px-3 py-1 bg-[#222222] border border-white/10 text-xs font-medium rounded-full text-gray-300">
                       {tag}
@@ -99,37 +113,25 @@ export default function FeaturedProjects({ dictionary }) {
                   ))}
                 </div>
 
-                {/* Kotak Deskripsi */}
-                <div className="bg-[#1a1a1a] border border-white/5 p-5 rounded-xl mt-2">
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                {/* Deskripsi dan tautan berada di bagian bawah kartu */}
+                <div className="mt-auto flex min-h-[8.5rem] flex-col justify-between rounded-xl border border-white/5 bg-[#1a1a1a] p-5">
+                  <p className="line-clamp-3 text-sm leading-relaxed text-gray-300">
                     {localizedProject.description || project.description}
                   </p>
-                </div>
 
-                {/* Tombol Ikon Link */}
-                <div className="flex items-center gap-4 mt-2">
-                  {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition" aria-label={`Open ${project.title} external link`}>
-                      <FaExternalLinkAlt className="w-5 h-5" />
-                    </a>
-                  )}
-                  {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition" aria-label={`Open ${project.title} GitHub repository`}>
-                      <FaGithub className="w-5 h-5" />
-                    </a>
-                  )}
-                </div>
-              </div>
-
-              {/* BAGIAN GAMBAR */}
-              <div className="order-first w-full bg-white rounded-2xl p-4 shadow-2xl overflow-hidden border-t-4 border-purple-500 sm:p-5">
-                <div className="w-full aspect-video rounded-xl overflow-hidden bg-gray-100 shadow-sm">
-                  <img 
-                    src={project.imageUrl} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover hover:scale-105 transition duration-500"
-                    loading="lazy"
-                  />
+                  {/* Tombol Ikon Link */}
+                  <div className="flex items-center gap-4 pt-3">
+                    {project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition hover:text-white" aria-label={`Open ${project.title} external link`}>
+                        <FaExternalLinkAlt className="h-5 w-5" />
+                      </a>
+                    )}
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition hover:text-white" aria-label={`Open ${project.title} GitHub repository`}>
+                        <FaGithub className="h-5 w-5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
