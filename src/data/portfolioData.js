@@ -10,7 +10,7 @@ export const portfolioData = {
 		longBio2: "Strong communicator with a proven ability to learn new concepts quickly, working effectively both independently and in teams.",
 		email: "aryasandytia26@gmail.com",
 		location: "Semarang, Jawa Tengah, Indonesia",
-		availability: "Open to Internship",
+		availability: "Open to Work",
 		tags: ["React", "Next.js", "UI/UX", "Laravel"]
 	},
 	skillCategories: [

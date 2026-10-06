@@ -60,7 +60,7 @@ export default function About({ dictionary, language = "en" }) {
             
             <div>
               <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{content.labels?.availability || "Availability"}</p>
-              <p className="text-white font-medium">{content.availability || about.availability || "Open to Internship"}</p>
+              <p className="text-white font-medium">{content.availability || about.availability || "Open to Work"}</p>
             </div>
 
             {/* PERBAIKAN: Tombol Download Resume (Mengarah ke /resume) */}
