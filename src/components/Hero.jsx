@@ -31,7 +31,7 @@ export default function Hero({ dictionary, language = "en" }) {
     <section
       id="hero"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-cover bg-center px-4 py-10 text-center sm:px-8 sm:py-20"
-      style={{ backgroundImage: "url('/section.png')" }}
+      style={{ backgroundImage: "url('/Section.png')" }}
     >
       <div className="absolute inset-0 z-10 bg-black/50" />
 

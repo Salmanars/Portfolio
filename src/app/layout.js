@@ -16,7 +16,7 @@ export const metadata = {
     locale: 'id_ID',
     images: [
       {
-        url: '/section.png',
+        url: '/Section.png',
         width: 1200,
         height: 630,
         alt: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA'
