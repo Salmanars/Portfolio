@@ -226,6 +226,10 @@
     }
   },
   "blog": {
+    "background": {
+      "main": "experience",
+      "bottom": "/bottom.jpg"
+    },
     "eyebrow": "DALAM PENGEMBANGAN",
     "title": "Arsip Blog",
     "description": "Blog ini sedang disiapkan. Artikel akan tersedia di sini setelah siap.",

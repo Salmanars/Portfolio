@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
 export default function HomePage({ dictionary, language = "en" }) {
+  const blogBackground = dictionary?.blog?.background ?? {};
+
   return (
     <main className="relative isolate min-h-screen w-full overflow-x-hidden text-white">
       <Hero dictionary={dictionary} language={language} />
@@ -51,23 +53,20 @@ export default function HomePage({ dictionary, language = "en" }) {
       </div>
 
       <div className="relative isolate w-full overflow-hidden">
-        <video
-          key="/blog1.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-          aria-hidden="true"
-        >
-          <source src="/blog1.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 z-0 bg-black/50" aria-hidden="true" />
+        {blogBackground.main === "experience" && <DarkModernBackground />}
         <div className="relative z-10 px-4 pb-10">
           <div className="mx-auto max-w-6xl">
             <Blog dictionary={dictionary} />
           </div>
-          <Footer dictionary={dictionary} language={language} />
+        </div>
+        <div
+          className="relative isolate z-10 bg-cover bg-center"
+          style={{ backgroundImage: `url("${blogBackground.bottom}")` }}
+        >
+          <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
+          <div className="relative z-10 mx-auto max-w-6xl px-4 py-10">
+            <Footer dictionary={dictionary} language={language} />
+          </div>
         </div>
       </div>
     </main>

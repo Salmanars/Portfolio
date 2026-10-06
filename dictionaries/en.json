@@ -225,6 +225,10 @@
     }
   },
   "blog": {
+    "background": {
+      "main": "experience",
+      "bottom": "/bottom.jpg"
+    },
     "eyebrow": "UNDER CONSTRUCTION",
     "title": "Blog Archive",
     "description": "This blog is being prepared. Articles will be available here once they're ready.",

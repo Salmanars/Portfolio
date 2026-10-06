@@ -7,7 +7,7 @@ export default function RouteBackgroundVideo({ className = "", ...videoProps }) 
   const cleanPath = pathname ? pathname.replace(/\/+$/, "") : "";
   const pathWithoutLocale = cleanPath.replace(/^\/(?:en|id)(?=\/|$)/, "");
 
-  if (!pathWithoutLocale) {
+  if (!pathWithoutLocale || pathWithoutLocale === "/blog") {
     return null;
   }
 
