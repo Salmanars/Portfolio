@@ -1,33 +1,120 @@
-import { portfolioData } from '@/data/portfolioData';
+const experiences = [
+  {
+    number: "[01]",
+    position: "Fullstack Engineer (Project-Based)",
+    company: "Klinik Pratama Diponegoro",
+    location: "Semarang, Indonesia",
+    period: "OCT 2025 - JUL 2026",
+    logo: "/logo1.png",
+    bullets: [
+      "Designed and developed a web-based digital medical certificate system with multi-role access control (Patient, Clinic Admin, Doctor, and Academic Staff) integrated with a blockchain verification network.",
+      "Engineered a responsive patient-facing portal featuring reservation workflows tailored for both university students and non-student patients.",
+      "Built specialized management dashboards for admins to oversee requests, doctors to approve certificates, and academic officers to verify document authenticity via hash matching.",
+      "Collaborated closely with blockchain engineers to integrate hashing mechanisms, ensuring tamper-proof document verification and data integrity."
+    ],
+    stack: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "REST API",
+      "Blockchain Hashing"
+    ]
+  },
+  {
+    number: "[02]",
+    position: "IT Support (Internship)",
+    company: "PT Duta Basis DataPrima",
+    location: "Bandung, Indonesia",
+    period: "JUL 2024 - AUG 2024",
+    logo: "/logo2.png",
+    bullets: [
+      "Designed and developed an interactive Virtual Reality (VR) application using Unity 3D to simulate the company's physical environments, building structures, and field areas.",
+      "Implemented 360° object interaction features and a user simulation navigation system, enabling clients to conduct virtual tours and review facility assets in real time.",
+      "Collaborated with the team to ensure high-accuracy 3D visual representations optimized for the company's physical site layout specifications."
+    ],
+    stack: [
+      "Unity 3D",
+      "C#",
+      "3D Modeling",
+      "Virtual Reality (VR)",
+      "IT Infrastructure Support"
+    ]
+  }
+];
 
 export default function Experience() {
-  const data = portfolioData.experiences;
-  const section = portfolioData.sectionTitles.experience;
-
   return (
-    <section id="experience" className="py-16">
-      <div className="mb-10 flex items-center gap-3">
-        <div className="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500" />
-        <h2 className="text-3xl font-bold text-white">{section.title}</h2>
+    <section id="experience" className="mx-auto max-w-5xl px-4 py-16 text-white">
+      <div className="mb-12 text-center">
+        <h2 className="font-serif text-4xl font-medium tracking-tight sm:text-5xl">
+          Experience
+        </h2>
+        <div className="mx-auto mt-4 h-px w-16 bg-purple-400/70" />
       </div>
 
-      <div className="relative ml-6 border-l-2 border-purple-500/30 pl-10">
-        {data.map((item) => (
-          <div key={item.title} className="relative mb-10 last:mb-0">
-            <div className="absolute -left-5 top-2 h-4 w-4 rounded-full border-2 border-purple-500 bg-black shadow-[0_0_0_8px_rgba(168,85,247,0.08)]" />
-            <div className="rounded-[2rem] border border-white/10 bg-[#1a1a1a] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                  <p className="mt-2 text-sm text-purple-300">{item.company}</p>
+      <div className="relative ml-5 border-l border-white/15 pl-8 sm:ml-7 sm:pl-12">
+        {experiences.map((experience) => (
+          <article
+            key={experience.number}
+            className="relative pb-10 last:pb-0"
+          >
+            <div className="absolute -left-[3.25rem] top-0 flex h-10 w-10 items-center justify-center rounded-full border border-purple-300/60 bg-[#0a0a0a] font-mono text-xs font-semibold text-purple-200 ring-4 ring-[#0a0a0a] sm:-left-[4.125rem]">
+              {experience.number}
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-7">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-2">
+                    <img
+                      src={experience.logo}
+                      alt={`${experience.company} logo`}
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold leading-snug sm:text-2xl">
+                      {experience.position}
+                    </h3>
+                    <p className="mt-2 text-sm font-medium text-purple-200">
+                      {experience.company}
+                      <span className="mx-2 text-neutral-500" aria-hidden="true">
+                        ·
+                      </span>
+                      <span className="text-neutral-400">{experience.location}</span>
+                    </p>
+                  </div>
                 </div>
-                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300 lg:ml-6">
-                  {item.year}
+
+                <span className="shrink-0 self-start rounded-full border border-white/10 px-3 py-1.5 font-mono text-[11px] tracking-wide text-neutral-300">
+                  {experience.period}
                 </span>
               </div>
-              <p className="mt-4 text-sm leading-7 text-slate-300">{item.description}</p>
+
+              <ul className="mt-6 space-y-3 text-sm leading-7 text-neutral-300">
+                {experience.bullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-3">
+                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-purple-300" aria-hidden="true" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6 flex flex-wrap gap-2 border-t border-white/10 pt-5">
+                {experience.stack.map((technology) => (
+                  <span
+                    key={technology}
+                    className="rounded-full border border-white/10 px-3 py-1 text-xs text-neutral-300"
+                  >
+                    {technology}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>

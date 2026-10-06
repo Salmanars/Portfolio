@@ -2,20 +2,24 @@
 
 import Hero from "./Hero";
 import About from "./About";
+import Experience from "./Experience";
 import TechStack from "./TechStack";
 import FeaturedProjects from "./FeaturedProjects";
 import Achievements from "./Achievements";
 import Blog from "./Blog";
+import DarkModernBackground from "./DarkModernBackground";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
 export default function HomePage({ dictionary, language = "en" }) {
   return (
-    <main className="w-full min-h-screen overflow-x-hidden bg-[#0a0a0a] text-white">
+    <main className="relative isolate min-h-screen w-full overflow-x-hidden text-white">
+      <DarkModernBackground />
       <Hero dictionary={dictionary} language={language} />
 
       <div className="relative z-10 mx-auto max-w-6xl space-y-24 px-4 pb-20 sm:px-6 lg:px-8">
         <About dictionary={dictionary} language={language} />
+        <Experience />
         <TechStack dictionary={dictionary} />
         <FeaturedProjects dictionary={dictionary} language={language} />
 
@@ -45,6 +49,7 @@ export default function HomePage({ dictionary, language = "en" }) {
             <source src="/last.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 z-10 bg-black/70" />
+          <div className="dark-grid-overlay absolute inset-0 z-20 opacity-60" />
         </div>
         <div className="relative z-20 px-4 pb-10">
           <div className="mx-auto max-w-6xl">

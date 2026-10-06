@@ -55,14 +55,13 @@ export default function TechStack({ dictionary }) {
   };
 
   return (
-    <section id="techstack" className="w-full overflow-hidden bg-[#0a0a0a] px-4 py-8 text-white sm:px-6 sm:py-12">
+    <section id="techstack" className="w-full overflow-hidden px-4 py-8 text-white sm:px-6 sm:py-12">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-8 flex flex-col gap-3 border-b border-neutral-800 pb-6 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="mb-2 font-mono text-xs uppercase tracking-[0.18em] text-cyan-400">{content.eyebrow || '[05 // CAPABILITIES]'}</p>
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">{content.title || 'Technical Stack'}</h2>
-          </div>
-          <span className="font-mono text-xs text-neutral-500">{categoryData.length} {content.summary || 'CATEGORIES / SKILLS'} {totalSkills}</span>
+        <div className="mb-8 flex flex-col items-center border-b border-neutral-800 pb-6 text-center sm:mb-10">
+          <h2 className="mb-12 text-4xl text-center font-serif md:text-5xl">{content.title || 'Technical Stack'}</h2>
+          <span className="font-mono text-xs text-neutral-500">
+            {categoryData.length} {content.summary || 'CATEGORIES / SKILLS'} {totalSkills}
+          </span>
         </div>
 
         <div className="border-t border-neutral-800" aria-label="Technical skill categories">

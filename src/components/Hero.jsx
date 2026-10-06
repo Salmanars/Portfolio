@@ -1,18 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const roles = [
-  "[01] Software Engineer",
-  "[02] Fullstack Developer",
+  "[01] Software Development",
+  "[02] Fullstack Engineer",
   "[03] IT Support"
+];
+
+const rotatingWords = [
+  "Passion.",
+  "Purpose.",
+  "Innovation.",
+  "Simplicity.",
+  "Precision."
 ];
 
 export default function Hero({ dictionary, language = "en" }) {
   const content = dictionary?.hero || {};
   const [roleIndex, setRoleIndex] = useState(0);
+  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
     const roleTimer = window.setInterval(() => {
@@ -22,10 +32,13 @@ export default function Hero({ dictionary, language = "en" }) {
     return () => window.clearInterval(roleTimer);
   }, []);
 
-  const activeRole = roles[roleIndex];
-  const roleMatch = activeRole.match(/^(\[\d{2}\])\s(.+)$/);
-  const roleNumber = roleMatch?.[1] || "[01]";
-  const roleName = roleMatch?.[2] || activeRole;
+  useEffect(() => {
+    const wordTimer = window.setInterval(() => {
+      setWordIndex((currentIndex) => (currentIndex + 1) % rotatingWords.length);
+    }, 2500);
+
+    return () => window.clearInterval(wordTimer);
+  }, []);
 
   return (
     <section
@@ -33,6 +46,7 @@ export default function Hero({ dictionary, language = "en" }) {
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-cover bg-center px-4 py-10 text-center sm:px-8 sm:py-20"
       style={{ backgroundImage: "url('/Section.png')" }}
     >
+      <div className="dark-grid-overlay absolute inset-0 z-[1] opacity-70" aria-hidden="true" />
       <div className="absolute inset-0 z-10 bg-black/50" />
 
       <div className="relative z-20 flex max-w-4xl flex-col items-center">
@@ -40,9 +54,22 @@ export default function Hero({ dictionary, language = "en" }) {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-6 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[10px] font-medium uppercase tracking-widest text-gray-300 shadow-sm backdrop-blur-sm"
+          className="mx-auto mb-6 inline-flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-white"
         >
-          {content.welcome || "Welcome to my Portfolio"}
+          <span aria-hidden="true">✨</span>
+          <span>Hi! I'm a</span>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.span
+              key={roles[roleIndex]}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.25 }}
+              className="text-white"
+            >
+              {roles[roleIndex]}
+            </motion.span>
+          </AnimatePresence>
         </motion.div>
 
         <motion.h1
@@ -51,39 +78,32 @@ export default function Hero({ dictionary, language = "en" }) {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="mb-4 text-3xl font-extrabold tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl"
         >
-          {content.title || "Who Is Me?"}
+          Hello! I'm Salman
+          <span className="inline-block align-middle mx-2 -rotate-6 hover:rotate-0 transition-transform duration-300 shadow-md rounded-lg overflow-hidden">
+            <Image
+              src="/salman jas.png"
+              alt="Salman"
+              width={56}
+              height={70}
+              className="object-cover rounded-lg"
+            />
+          </span>
+          {" "}Welcome to my portfolio! Building digital experiences that matter with
         </motion.h1>
 
-        <div className="flex min-h-[4.5rem] w-full max-w-[22rem] items-center justify-center sm:min-h-[3.5rem] sm:max-w-md">
-          <div className="flex w-full items-center justify-between gap-4 rounded-md border border-white/10 bg-black/20 px-4 py-3 text-left shadow-lg backdrop-blur-md sm:px-5">
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={activeRole}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="min-w-0 flex-1 font-mono text-xs sm:text-sm"
-              >
-                <span className="text-cyan-400">{roleNumber}</span>{" "}
-                <span className="text-white">{roleName}</span>
-              </motion.div>
-            </AnimatePresence>
-
-            <div
-              className="flex shrink-0 items-center gap-1.5"
-              aria-label={`Role ${roleIndex + 1} of ${roles.length}`}
+        <div className="overflow-hidden py-2" aria-live="polite">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.p
+              key={rotatingWords[wordIndex]}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -24 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="text-3xl font-bold text-purple-400 sm:text-4xl lg:text-5xl"
             >
-              {roles.map((role, index) => (
-                <span
-                  key={role}
-                  className={`h-1.5 w-1.5 rounded-full transition-colors duration-300 ${
-                    index === roleIndex ? "bg-cyan-400" : "bg-neutral-600"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+              {rotatingWords[wordIndex]}
+            </motion.p>
+          </AnimatePresence>
         </div>
 
         <motion.div
