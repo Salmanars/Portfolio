@@ -10,5 +10,9 @@ const dictionaries = {
 export const supportedLanguages = ["en", "id"];
 
 export async function getDictionary(language) {
-  return dictionaries[language] || dictionaries.en;
+  const dictionary = dictionaries[language];
+  if (!dictionary) {
+    throw new RangeError(`Unsupported language: ${language}`);
+  }
+  return dictionary;
 }

@@ -8,10 +8,10 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function FeaturedProjects({ dictionary }) {
-  const { projects } = portfolioData;
+  const projects = Array.isArray(portfolioData.projects) ? portfolioData.projects : [];
   const content = dictionary?.projects || {};
-  const pathLanguage = usePathname().split('/')[1];
-  const projectsHref = ['en', 'id'].includes(pathLanguage) ? `/${pathLanguage}/projects` : '/projects';
+  const pathLanguage = usePathname()?.split('/')[1];
+  const projectsHref = `/${['en', 'id'].includes(pathLanguage) ? pathLanguage : 'en'}/projects`;
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
@@ -24,14 +24,16 @@ export default function FeaturedProjects({ dictionary }) {
     vr: ['Unity 3D', 'Virtual Reality', '3D Interaction']
   };
 
-  const filteredProjects = projects?.filter((project) => {
+  const filteredProjects = projects.filter((project) => {
     if (activeCategory === 'all') return true;
 
-    return project.tags?.some((tag) => categoryTags[activeCategory].includes(tag));
+    const categoryTagList = categoryTags[activeCategory];
+    return Array.isArray(project.tags)
+      && categoryTagList?.some((tag) => project.tags.includes(tag));
   });
 
   // Hanya ambil 3 project pertama untuk ditampilkan di halaman ini
-  const displayedProjects = filteredProjects?.slice(0, 3);
+  const displayedProjects = filteredProjects.slice(0, 3);
 
   return (
     <section id="projects" className="py-20 px-4 max-w-6xl mx-auto text-white overflow-hidden">
@@ -45,7 +47,7 @@ export default function FeaturedProjects({ dictionary }) {
         <div className="w-10 h-1 bg-pink-500 rounded-full mt-3"></div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-3 mb-16" role="group" aria-label="Filter project categories">
+      <div className="flex flex-wrap justify-center gap-3 mb-16" role="group" aria-label={content.filtersLabel || "Filter project categories"}>
         {categories.map((category) => (
           <button
             key={category.key}
@@ -65,7 +67,7 @@ export default function FeaturedProjects({ dictionary }) {
 
       {/* 2. RESPONSIVE PROJECT GRID */}
       <motion.div 
-        initial={{ opacity: 0 }}
+        initial={false}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
@@ -77,7 +79,7 @@ export default function FeaturedProjects({ dictionary }) {
           return (
             <motion.div 
               key={index} 
-              initial={{ opacity: 0, y: 50 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -122,12 +124,12 @@ export default function FeaturedProjects({ dictionary }) {
                   {/* Tombol Ikon Link */}
                   <div className="flex items-center gap-4 pt-3">
                     {project.link && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition hover:text-white" aria-label={`Open ${project.title} external link`}>
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition hover:text-white" aria-label={(content.demoLinkLabel || "Open {title} live demo").replace("{title}", project.title)}>
                         <FaExternalLinkAlt className="h-5 w-5" />
                       </a>
                     )}
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition hover:text-white" aria-label={`Open ${project.title} GitHub repository`}>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition hover:text-white" aria-label={(content.repositoryLinkLabel || "Open {title} GitHub repository").replace("{title}", project.title)}>
                         <FaGithub className="h-5 w-5" />
                       </a>
                     )}

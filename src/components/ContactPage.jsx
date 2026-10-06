@@ -12,25 +12,18 @@ export default function ContactPage({ contact, dictionary, language = "en" }) {
   const content = dictionary?.contactPage || {};
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#0a0a0a] text-white">
-      <div className="absolute inset-0 z-0 h-full w-full">
-        <video className="h-full w-full object-cover" autoPlay muted loop playsInline>
-          <source src="/last.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 z-10 bg-black/80" />
-      </div>
-
-      <div className="relative z-20 flex min-h-screen flex-col">
+    <main className="relative min-h-screen overflow-hidden bg-transparent text-white">
+      <div className="relative z-10 flex min-h-screen flex-col">
         <div className="relative w-full px-4 pb-16 pt-32">
           <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium text-gray-300 backdrop-blur-sm">
-              {content.eyebrow || "Contact →"}
+              {content.eyebrow}
             </span>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
-              {content.title || contact.title}
+              {content.title}
             </h1>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-gray-300 drop-shadow-md md:text-lg">
-              {content.description || contact.subtitle}
+              {content.description}
             </p>
           </div>
         </div>

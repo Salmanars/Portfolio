@@ -15,9 +15,11 @@ export default async function LocalizedBlogPage({ params }) {
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] px-4 pt-24 text-white">
-      <Blog dictionary={dictionary} />
-      <Footer dictionary={dictionary} lang={params.lang} />
+    <main className="relative isolate min-h-screen w-full overflow-hidden bg-transparent px-4 pt-24 text-white">
+      <div className="relative z-10">
+        <Blog dictionary={dictionary} />
+        <Footer dictionary={dictionary} lang={params.lang} />
+      </div>
     </main>
   );
 }

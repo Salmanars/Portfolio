@@ -28,7 +28,7 @@ export default function Achievements({ dictionary }) {
           <div className="w-36 h-36 mb-4 shrink-0 flex items-center justify-center">
             <img 
               src="/OIP-removebg-preview.png" 
-              alt="Logo Undip" 
+              alt={content.universityLogoAlt || "Diponegoro University logo"}
               className="w-full h-full object-contain drop-shadow-md" 
             />
           </div>
@@ -67,7 +67,7 @@ export default function Achievements({ dictionary }) {
         <div className="w-full max-w-3xl rounded-xl overflow-hidden shadow-2xl border border-white/5">
           <img 
             src={data.proudMoment.imageUrl} 
-            alt="Gemastik Moment" 
+            alt={content.proudMomentAlt || "Gemastik moment"}
             className="w-full h-auto object-cover"
           />
         </div>
@@ -88,7 +88,7 @@ export default function Achievements({ dictionary }) {
               <div className="w-full space-y-1 text-xs text-gray-400">
                 <p>{cert.issuer}</p>
                 <p>{certificateContent.dates?.[cert.date] || cert.date}</p>
-                <p className="break-all text-gray-500">ID: {cert.certId}</p>
+                <p className="break-all text-gray-500">{certificateContent.certificateId || "ID"}: {cert.certId}</p>
               </div>
               {cert.pdfPath ? (
                 <a

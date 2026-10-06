@@ -26,7 +26,7 @@ export default function About({ dictionary, language = "en" }) {
           <div className="w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-[#1a1a1a] bg-[#1a1a1a] shrink-0">
             <img
               src="/Profile.jpeg" 
-              alt="Profile"
+              alt={content.profileAlt || "Profile"}
               className="w-full h-full object-cover object-top" // object-top menjaga wajah tidak terpotong
             />
           </div>

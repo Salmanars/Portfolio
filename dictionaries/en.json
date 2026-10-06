@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Salman Arya Sandytia - Full-Stack Engineer & CCNA",
+    "description": "Portfolio of Salman Arya Sandytia, Full-Stack Engineer and CCNA.",
+    "imageAlt": "Salman Arya Sandytia - Full-Stack Engineer & CCNA"
+  },
   "nav": {
     "logo": "salman_",
     "menu": "MENU",
@@ -8,21 +13,68 @@
     "about": "About",
     "projects": "Projects",
     "contact": "Contact",
-    "footer": "Salman Arya Sandytia / Full-Stack Engineer & CCNA"
+    "footer": "Salman Arya Sandytia / Full-Stack Engineer & CCNA",
+    "currentLocalTime": "Current local time"
   },
   "language": {
     "label": "Language",
     "english": "EN",
-    "indonesian": "ID"
+    "indonesian": "ID",
+    "switchToEnglish": "Switch language to English",
+    "switchToIndonesian": "Switch language to Indonesian"
   },
   "hero": {
     "welcome": "Welcome to my Portfolio",
     "title": "Who Is Me?",
     "role": "Cisco Certified Network Associate (CCNA)",
+    "roleIntro": "Hi! I'm a",
+    "roles": [
+      "[01] Software Development",
+      "[02] Fullstack Engineer",
+      "[03] IT Support"
+    ],
+    "headlineStart": "Hello! I'm Salman",
+    "headlineEnd": "Welcome to my portfolio! Building digital experiences that matter with",
+    "profileAlt": "Salman",
+    "rotatingWords": ["Passion.", "Purpose.", "Innovation.", "Simplicity.", "Precision."],
     "contactCta": "Get in touch"
   },
+  "whoIsMe": {
+    "title": "WHO IS ME?",
+    "bearAlt": "Bear illustration",
+    "openGallery": "My personal story",
+    "galleryTitle": "Memories & Achievements",
+    "closeGallery": "Close gallery",
+    "memoryAlt": "Personal memory",
+    "previous": "Previous memory",
+    "next": "Next memory",
+    "showMemory": "Show memory",
+    "captions": [
+      "A moment from my personal story · 1",
+      "A moment from my personal story · 2",
+      "A moment from my personal story · 3",
+      "A moment from my personal story · 4",
+      "A moment from my personal story · 5",
+      "A moment from my personal story · 6",
+      "A moment from my personal story · 7",
+      "A moment from my personal story · 8",
+      "A moment from my personal story · 9",
+      "A moment from my personal story · 10"
+    ]
+  },
   "about": {
-    "description": "A Computer Engineering graduate from Diponegoro University (GPA 3.59/4.00) with hands-on experience in full-stack web development and software delivery. Skilled in architecting scalable web applications, integrating APIs, and ensuring system reliability through modern engineering practices. An adaptable team player with strong communication skills and a continuous learning mindset."
+    "eyebrow": "My personal story",
+    "title": "About Me",
+    "description": "A Computer Engineering graduate from Diponegoro University (GPA 3.59/4.00) with hands-on experience in full-stack web development and software delivery. Skilled in architecting scalable web applications, integrating APIs, and ensuring system reliability through modern engineering practices. An adaptable team player with strong communication skills and a continuous learning mindset.",
+    "profileAlt": "Profile photo",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "location": "Location",
+      "availability": "Availability"
+    },
+    "availability": "Open to Internship",
+    "downloadResume": "Download Resume"
   },
   "techStack": {
     "title": "Technical Stack",
@@ -45,11 +97,82 @@
     "backHome": "← Back to Home",
     "liveDemo": "Live Demo",
     "navigation": "Navigation",
+    "link": "Link",
     "project": "Project",
     "blog": "Blog",
     "contact": "Contact",
     "updatesTitle": "Never Miss an Update",
-    "updatesDescription": "Get an email when there's something new."
+    "updatesDescription": "Get an email when there's something new.",
+    "profileAlt": "Salman Arya Sandytia profile photo",
+    "socials": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
+  },
+  "projects": {
+    "eyebrow": "Some of my recent work",
+    "title": "Featured Projects",
+    "filters": {
+      "all": "All",
+      "web": "Web Development",
+      "vr": "VR & 3D"
+    },
+    "items": {
+      "Klinik Pratama Diponegoro (DipoVerify)": {
+        "subtitle": "Fullstack Engineer (Project-Based)",
+        "description": "Designed and developed a web-based digital medical certificate system with multi-role access control and blockchain hash verification."
+      },
+      "PT Duta Basis DataPrima": {
+        "subtitle": "IT Support & VR Developer (Internship)",
+        "description": "Developed an interactive Unity 3D virtual reality application for facility tours and asset reviews."
+      },
+      "Portfolio Saddam Saktya": {
+        "subtitle": "Frontend Developer (Freelance / Client Project)",
+        "description": "Designed and developed a responsive portfolio website using Next.js, React.js, and Tailwind CSS."
+      }
+    },
+    "viewAll": "View All Projects",
+    "noResults": "No projects found in this category.",
+    "filtersLabel": "Filter project categories",
+    "demoLinkLabel": "Open {title} live demo",
+    "repositoryLinkLabel": "Open {title} GitHub repository"
+  },
+  "experience": {
+    "title": "Experience",
+    "entries": [
+      {
+        "number": "[01]",
+        "position": "Fullstack Engineer (Project-Based)",
+        "company": "Klinik Pratama Diponegoro",
+        "location": "Semarang, Indonesia",
+        "period": "OCT 2025 - JUL 2026",
+        "logo": "/logo1.png",
+        "logoAlt": "Klinik Pratama Diponegoro logo",
+        "bullets": [
+          "Designed and developed a web-based digital medical certificate system with multi-role access control (Patient, Clinic Admin, Doctor, and Academic Staff) integrated with a blockchain verification network.",
+          "Engineered a responsive patient-facing portal featuring reservation workflows tailored for both university students and non-student patients.",
+          "Built specialized management dashboards for admins to oversee requests, doctors to approve certificates, and academic officers to verify document authenticity via hash matching.",
+          "Collaborated closely with blockchain engineers to integrate hashing mechanisms, ensuring tamper-proof document verification and data integrity."
+        ],
+        "stack": ["Next.js", "React.js", "Node.js", "Express.js", "MySQL", "REST API", "Blockchain Hashing"]
+      },
+      {
+        "number": "[02]",
+        "position": "IT Support (Internship)",
+        "company": "PT Duta Basis DataPrima",
+        "location": "Bandung, Indonesia",
+        "period": "JUL 2024 - AUG 2024",
+        "logo": "/logo2.png",
+        "logoAlt": "PT Duta Basis DataPrima logo",
+        "bullets": [
+          "Designed and developed an interactive Virtual Reality (VR) application using Unity 3D to simulate the company's physical environments, building structures, and field areas.",
+          "Implemented 360° object interaction features and a user simulation navigation system, enabling clients to conduct virtual tours and review facility assets in real time.",
+          "Collaborated with the team to ensure high-accuracy 3D visual representations optimized for the company's physical site layout specifications."
+        ],
+        "stack": ["Unity 3D", "C#", "3D Modeling", "Virtual Reality (VR)", "IT Infrastructure Support"]
+      }
+    ]
   },
   "resumePage": {
     "eyebrow": "My Professional Profile",
@@ -79,6 +202,28 @@
     "title": "Contact & Connect",
     "description": "I'm always open to new opportunities, collaborations, or just a friendly chat."
   },
+  "achievements": {
+    "eyebrow": "Recognition & Accomplishments",
+    "title": "Awards & Achievements",
+    "universityLogoAlt": "Diponegoro University logo",
+    "proudMoment": "A Proud Moment",
+    "proudMomentAlt": "Finalist team at Gemastik 2024",
+    "caption": "FishCoin team finalist in Gemastik 2024 Scientific Paper",
+    "items": [
+      "Finalist in the Gemastik 2024 Scientific Paper category",
+      "Demonstrated strong teamwork, creativity, and the practical application of web development skills in a competitive environment."
+    ]
+  },
+  "certificates": {
+    "title": "Extracurricular Certificates",
+    "verify": "Verify",
+    "certificateId": "ID",
+    "dates": {
+      "August 2024": "August 2024",
+      "January 2024": "January 2024",
+      "January 2023": "January 2023"
+    }
+  },
   "blog": {
     "eyebrow": "UNDER CONSTRUCTION",
     "title": "Blog Archive",
@@ -98,10 +243,15 @@
     "updatesDescription": "Get an email when there's something new.",
     "links": {
       "about": "About",
-      "projects": "Project",
+      "projects": "Projects",
       "blog": "Blog",
       "contact": "Contact",
       "resume": "Resume"
+    },
+    "socials": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "mail": "Email"
     }
   }
 }

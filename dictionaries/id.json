@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Salman Arya Sandytia - Insinyur Full-Stack & CCNA",
+    "description": "Portofolio Salman Arya Sandytia, Insinyur Full-Stack dan CCNA.",
+    "imageAlt": "Salman Arya Sandytia - Insinyur Full-Stack & CCNA"
+  },
   "nav": {
     "logo": "salman_",
     "menu": "MENU",
@@ -8,23 +13,60 @@
     "about": "Tentang",
     "projects": "Proyek",
     "contact": "Kontak",
-    "footer": "Salman Arya Sandytia / Full-Stack Engineer & CCNA"
+    "footer": "Salman Arya Sandytia / Full-Stack Engineer & CCNA",
+    "currentLocalTime": "Waktu lokal saat ini"
   },
   "language": {
     "label": "Bahasa",
     "english": "EN",
-    "indonesian": "ID"
+    "indonesian": "ID",
+    "switchToEnglish": "Ganti bahasa ke Inggris",
+    "switchToIndonesian": "Ganti bahasa ke Indonesia"
   },
   "hero": {
     "welcome": "Selamat datang di Portofolio saya",
     "title": "Siapa Saya?",
     "role": "Cisco Certified Network Associate (CCNA)",
+    "roleIntro": "Hai! Saya seorang",
+    "roles": [
+      "[01] Pengembang Perangkat Lunak",
+      "[02] Fullstack Engineer",
+      "[03] IT Support"
+    ],
+    "headlineStart": "Halo! Saya Salman",
+    "headlineEnd": "Selamat datang di portofolio saya! Membangun pengalaman digital yang bermakna dengan",
+    "profileAlt": "Salman",
+    "rotatingWords": ["Semangat.", "Tujuan.", "Inovasi.", "Kesederhanaan.", "Presisi."],
     "contactCta": "Hubungi saya"
+  },
+  "whoIsMe": {
+    "title": "SIAPA SAYA?",
+    "bearAlt": "Ilustrasi beruang",
+    "openGallery": "Kisah pribadi saya",
+    "galleryTitle": "Kenangan & Pencapaian",
+    "closeGallery": "Tutup galeri",
+    "memoryAlt": "Kenangan pribadi",
+    "previous": "Kenangan sebelumnya",
+    "next": "Kenangan berikutnya",
+    "showMemory": "Tampilkan kenangan",
+    "captions": [
+      "Momen dari perjalanan pribadi saya · 1",
+      "Momen dari perjalanan pribadi saya · 2",
+      "Momen dari perjalanan pribadi saya · 3",
+      "Momen dari perjalanan pribadi saya · 4",
+      "Momen dari perjalanan pribadi saya · 5",
+      "Momen dari perjalanan pribadi saya · 6",
+      "Momen dari perjalanan pribadi saya · 7",
+      "Momen dari perjalanan pribadi saya · 8",
+      "Momen dari perjalanan pribadi saya · 9",
+      "Momen dari perjalanan pribadi saya · 10"
+    ]
   },
   "about": {
     "eyebrow": "Cerita Saya",
     "title": "Tentang Saya",
     "description": "Lulusan Teknik Komputer Universitas Diponegoro (IPK 3.59/4.00) dengan pengalaman praktis di bidang full-stack web development dan software delivery. Terampil dalam membangun aplikasi web yang scalable, mengintegrasikan API, serta menjaga keandalan sistem melalui engineering best practices. Memiliki kemampuan komunikasi yang kuat, cepat beradaptasi, dan terbiasa bekerja secara mandiri maupun tim.",
+    "profileAlt": "Foto profil",
     "labels": {
       "name": "NAMA",
       "email": "EMAIL",
@@ -36,7 +78,7 @@
   },
   "techStack": {
     "eyebrow": "[05 // KEMAMPUAN]",
-    "title": "Technical Stack",
+    "title": "Teknologi",
     "summary": "KATEGORI / SKILL",
     "categoryLabels": {
       "01": "Pengembangan Frontend",
@@ -66,10 +108,17 @@
       "PT Duta Basis DataPrima": {
         "subtitle": "IT Support & Pengembang VR (Magang)",
         "description": "Merancang dan mengembangkan aplikasi Virtual Reality (VR) interaktif menggunakan Unity 3D untuk mensimulasikan lingkungan fisik lokasi dan tata letak fasilitas. Mengimplementasikan interaksi objek 360 derajat dan sistem navigasi pengguna untuk tur virtual real-time serta peninjauan aset fasilitas."
+      },
+      "Portfolio Saddam Saktya": {
+        "subtitle": "Frontend Developer (Freelance / Proyek Klien)",
+        "description": "Merancang dan mengembangkan website portofolio responsif menggunakan Next.js, React.js, dan Tailwind CSS."
       }
     },
     "viewAll": "Lihat Semua Proyek",
-    "noResults": "Tidak ada proyek dalam kategori ini."
+    "noResults": "Tidak ada proyek dalam kategori ini.",
+    "filtersLabel": "Filter kategori proyek",
+    "demoLinkLabel": "Buka demo langsung {title}",
+    "repositoryLinkLabel": "Buka repositori GitHub {title}"
   },
   "projectsPage": {
     "eyebrow": "Semua Karya Saya",
@@ -77,11 +126,54 @@
     "backHome": "← Kembali ke Beranda",
     "liveDemo": "Demo Langsung",
     "navigation": "Navigasi",
+    "link": "Tautan",
     "project": "Proyek",
     "blog": "Blog",
     "contact": "Kontak",
     "updatesTitle": "Jangan Lewatkan Pembaruan",
-    "updatesDescription": "Dapatkan email saat ada sesuatu yang baru."
+    "updatesDescription": "Dapatkan email saat ada sesuatu yang baru.",
+    "profileAlt": "Foto profil Salman Arya Sandytia",
+    "socials": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
+  },
+  "experience": {
+    "title": "Pengalaman",
+    "entries": [
+      {
+        "number": "[01]",
+        "position": "Fullstack Engineer (Berbasis Proyek)",
+        "company": "Klinik Pratama Diponegoro",
+        "location": "Semarang, Indonesia",
+        "period": "OKT 2025 - JUL 2026",
+        "logo": "/logo1.png",
+        "logoAlt": "Logo Klinik Pratama Diponegoro",
+        "bullets": [
+          "Merancang dan mengembangkan sistem surat keterangan medis digital berbasis web dengan kontrol akses multi-peran (Pasien, Admin Klinik, Dokter, dan Staf Akademik) yang terintegrasi dengan jaringan verifikasi blockchain.",
+          "Membangun portal pasien responsif dengan alur reservasi yang disesuaikan untuk mahasiswa dan pasien non-mahasiswa.",
+          "Membangun dasbor manajemen khusus bagi admin untuk mengelola permintaan, dokter untuk menyetujui surat, dan staf akademik untuk memverifikasi keaslian dokumen melalui pencocokan hash.",
+          "Berkolaborasi dengan engineer blockchain untuk mengintegrasikan mekanisme hashing guna memastikan verifikasi dokumen tahan manipulasi dan menjaga integritas data."
+        ],
+        "stack": ["Next.js", "React.js", "Node.js", "Express.js", "MySQL", "REST API", "Blockchain Hashing"]
+      },
+      {
+        "number": "[02]",
+        "position": "IT Support (Magang)",
+        "company": "PT Duta Basis DataPrima",
+        "location": "Bandung, Indonesia",
+        "period": "JUL 2024 - AGU 2024",
+        "logo": "/logo2.png",
+        "logoAlt": "Logo PT Duta Basis DataPrima",
+        "bullets": [
+          "Merancang dan mengembangkan aplikasi Virtual Reality (VR) interaktif menggunakan Unity 3D untuk mensimulasikan lingkungan fisik perusahaan, struktur bangunan, dan area lapangan.",
+          "Menerapkan fitur interaksi objek 360° dan sistem navigasi simulasi pengguna agar klien dapat melakukan tur virtual dan meninjau aset fasilitas secara langsung.",
+          "Berkolaborasi dengan tim untuk memastikan representasi visual 3D berakurasi tinggi sesuai spesifikasi tata letak lokasi fisik perusahaan."
+        ],
+        "stack": ["Unity 3D", "C#", "Pemodelan 3D", "Virtual Reality (VR)", "Dukungan Infrastruktur TI"]
+      }
+    ]
   },
   "resumePage": {
     "eyebrow": "Profil Profesional Saya",
@@ -115,6 +207,8 @@
     "eyebrow": "Pengakuan & Prestasi",
     "title": "Penghargaan & Prestasi",
     "proudMoment": "Momen Membanggakan",
+    "universityLogoAlt": "Logo Universitas Diponegoro",
+    "proudMomentAlt": "Tim finalis Gemastik 2024",
     "caption": "Tim FishCoin Finalis Paper Ilmiah Gemastik 2024",
     "items": [
       "Finalis Gemastik 2024 Scientific Paper",
@@ -124,6 +218,7 @@
   "certificates": {
     "title": "Sertifikat Ekstrakurikuler",
     "verify": "Verifikasi",
+    "certificateId": "ID",
     "dates": {
       "August 2024": "Agustus 2024",
       "January 2024": "Januari 2024",
@@ -153,6 +248,11 @@
       "blog": "Blog",
       "contact": "Kontak",
       "resume": "Resume"
+    },
+    "socials": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "mail": "Email"
     }
   }
 }

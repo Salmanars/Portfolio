@@ -16,7 +16,7 @@ export const metadata = {
     locale: 'id_ID',
     images: [
       {
-        url: '/Section.png',
+        url: '/section.png',
         width: 1200,
         height: 630,
         alt: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA'
@@ -27,7 +27,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id">
+    <html lang="en">
       {/* Tambahkan link FontAwesome di dalam head untuk memuat ikon */}
       <head>
         <link 
@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
         />
       </head>
-      <body className={`${inter.className} bg-[#0a0a0a] text-white`}>
+      <body className={`${inter.className} bg-transparent text-white`}>
         {children}
       </body>
     </html>

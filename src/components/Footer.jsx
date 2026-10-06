@@ -1,7 +1,8 @@
 import { portfolioData } from '@/data/portfolioData';
 
 export default function Footer({ dictionary, lang, language = "en" }) {
-  const activeLanguage = lang || language;
+  const requestedLanguage = lang || language;
+  const activeLanguage = requestedLanguage === "id" ? "id" : "en";
   const data = portfolioData.footer;
   const content = dictionary?.footer || {};
   const links = content.links || {};
@@ -21,7 +22,7 @@ export default function Footer({ dictionary, lang, language = "en" }) {
     return {
       ...link,
       href: localizedHref,
-      label: links[link.label.toLowerCase()] || link.label
+      label: links[link.label.toLowerCase()]
     };
   });
 
@@ -30,22 +31,22 @@ export default function Footer({ dictionary, lang, language = "en" }) {
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h3 className="text-xl font-semibold text-white">{data.name}</h3>
-          <p className="mt-3 text-sm text-slate-400">{content.description || data.description}</p>
+          <p className="mt-3 text-sm text-slate-400">{content.description}</p>
         </div>
 
         <div>
-          <h4 className="mb-4 text-sm font-semibold text-white">{content.navigation || "Navigation"}</h4>
+          <h4 className="mb-4 text-sm font-semibold text-white">{content.navigation}</h4>
           <div className="flex flex-wrap items-center gap-4 text-sm text-slate-300">
             {localizedLinks.map((link) => (
               <a key={link.label} href={link.href} className="transition hover:text-purple-300">
-                {links[link.label.toLowerCase()] || link.label}
+                {link.label}
               </a>
             ))}
           </div>
         </div>
 
         <div>
-          <h4 className="mb-4 text-sm font-semibold text-white">{content.link || "Link"}</h4>
+          <h4 className="mb-4 text-sm font-semibold text-white">{content.link}</h4>
           <div className="flex flex-wrap items-center gap-3">
             {data.socials.map((social) => (
               <a
@@ -55,16 +56,16 @@ export default function Footer({ dictionary, lang, language = "en" }) {
                 rel="noreferrer"
                 className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-purple-400/40 hover:bg-purple-500/10"
               >
-                {social.label}
+                {content.socials[social.icon]}
               </a>
             ))}
           </div>
         </div>
 
         <div className="max-w-xs">
-          <h4 className="mb-4 text-sm font-semibold text-white">{content.updatesTitle || "Never Miss an Update"}</h4>
+          <h4 className="mb-4 text-sm font-semibold text-white">{content.updatesTitle}</h4>
           <p className="text-sm leading-relaxed text-slate-400">
-            {content.updatesDescription || "Get an email when there's something new."}
+            {content.updatesDescription}
           </p>
         </div>
       </div>

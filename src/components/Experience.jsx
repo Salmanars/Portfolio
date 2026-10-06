@@ -1,61 +1,18 @@
-const experiences = [
-  {
-    number: "[01]",
-    position: "Fullstack Engineer (Project-Based)",
-    company: "Klinik Pratama Diponegoro",
-    location: "Semarang, Indonesia",
-    period: "OCT 2025 - JUL 2026",
-    logo: "/logo1.png",
-    bullets: [
-      "Designed and developed a web-based digital medical certificate system with multi-role access control (Patient, Clinic Admin, Doctor, and Academic Staff) integrated with a blockchain verification network.",
-      "Engineered a responsive patient-facing portal featuring reservation workflows tailored for both university students and non-student patients.",
-      "Built specialized management dashboards for admins to oversee requests, doctors to approve certificates, and academic officers to verify document authenticity via hash matching.",
-      "Collaborated closely with blockchain engineers to integrate hashing mechanisms, ensuring tamper-proof document verification and data integrity."
-    ],
-    stack: [
-      "Next.js",
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MySQL",
-      "REST API",
-      "Blockchain Hashing"
-    ]
-  },
-  {
-    number: "[02]",
-    position: "IT Support (Internship)",
-    company: "PT Duta Basis DataPrima",
-    location: "Bandung, Indonesia",
-    period: "JUL 2024 - AUG 2024",
-    logo: "/logo2.png",
-    bullets: [
-      "Designed and developed an interactive Virtual Reality (VR) application using Unity 3D to simulate the company's physical environments, building structures, and field areas.",
-      "Implemented 360° object interaction features and a user simulation navigation system, enabling clients to conduct virtual tours and review facility assets in real time.",
-      "Collaborated with the team to ensure high-accuracy 3D visual representations optimized for the company's physical site layout specifications."
-    ],
-    stack: [
-      "Unity 3D",
-      "C#",
-      "3D Modeling",
-      "Virtual Reality (VR)",
-      "IT Infrastructure Support"
-    ]
-  }
-];
+export default function Experience({ dictionary }) {
+  const content = dictionary?.experience || {};
+  const entries = content.entries || [];
 
-export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-5xl px-4 py-16 text-white">
       <div className="mb-12 text-center">
         <h2 className="font-serif text-4xl font-medium tracking-tight sm:text-5xl">
-          Experience
+          {content.title}
         </h2>
         <div className="mx-auto mt-4 h-px w-16 bg-purple-400/70" />
       </div>
 
       <div className="relative ml-5 border-l border-white/15 pl-8 sm:ml-7 sm:pl-12">
-        {experiences.map((experience) => (
+        {entries.map((experience) => (
           <article
             key={experience.number}
             className="relative pb-10 last:pb-0"
@@ -70,7 +27,7 @@ export default function Experience() {
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-2">
                     <img
                       src={experience.logo}
-                      alt={`${experience.company} logo`}
+                      alt={experience.logoAlt}
                       className="h-full w-full object-contain"
                       loading="lazy"
                     />
