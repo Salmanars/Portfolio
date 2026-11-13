@@ -9,6 +9,11 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA',
   description: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA',
+  icons: {
+    icon: '/salman%20jas.png',
+    shortcut: '/salman%20jas.png',
+    apple: '/salman%20jas.png'
+  },
   openGraph: {
     title: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA',
     description: 'Salman Arya Sandytia - Full-Stack Engineer & CCNA',

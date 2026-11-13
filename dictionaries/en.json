@@ -113,6 +113,7 @@
   "projects": {
     "eyebrow": "Some of my recent work",
     "title": "Featured Projects",
+    "featuredDescription": "A curated collection of projects where I turn ideas into scalable, performant, and user-focused digital products. Each project reflects my approach to problem-solving, system design, and real-world implementation.",
     "filters": {
       "all": "All",
       "web": "Web Development",
@@ -205,14 +206,9 @@
   "achievements": {
     "eyebrow": "Recognition & Accomplishments",
     "title": "Awards & Achievements",
-    "universityLogoAlt": "Diponegoro University logo",
-    "proudMoment": "A Proud Moment",
-    "proudMomentAlt": "Finalist team at Gemastik 2024",
-    "caption": "FishCoin team finalist in Gemastik 2024 Scientific Paper",
-    "items": [
-      "Finalist in the Gemastik 2024 Scientific Paper category",
-      "Demonstrated strong teamwork, creativity, and the practical application of web development skills in a competitive environment."
-    ]
+    "highlightCategory": "Scientific Paper · Fishcoin Team",
+    "highlightTitle": "Gemastik XVII 2024 Finalist",
+    "highlightDescription": "Finalist in the Scientific Paper category at GEMASTIK XVII 2024 with Team Fishcoin."
   },
   "certificates": {
     "title": "Extracurricular Certificates",
@@ -245,17 +241,18 @@
     "link": "Link",
     "updatesTitle": "Never Miss an Update",
     "updatesDescription": "Get an email when there's something new.",
+    "emailPlaceholder": "Your email address",
     "links": {
       "about": "About",
-      "projects": "Projects",
+      "project": "Project",
       "blog": "Blog",
-      "contact": "Contact",
-      "resume": "Resume"
+      "awards": "Awards",
+      "guestbook": "Guestbook"
     },
     "socials": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "mail": "Email"
+      "instagram": "Instagram"
     }
   }
 }

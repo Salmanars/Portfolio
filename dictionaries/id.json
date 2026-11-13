@@ -95,6 +95,7 @@
   "projects": {
     "eyebrow": "Beberapa karya terbaru saya",
     "title": "Proyek Unggulan",
+    "featuredDescription": "Koleksi proyek pilihan tempat saya mengubah ide menjadi produk digital yang terskalakan, berperforma tinggi, dan berfokus pada pengguna. Setiap proyek mencerminkan pendekatan saya terhadap pemecahan masalah, perancangan sistem, dan implementasi di dunia nyata.",
     "filters": {
       "all": "Semua",
       "web": "Pengembangan Web",
@@ -206,14 +207,9 @@
   "achievements": {
     "eyebrow": "Pengakuan & Prestasi",
     "title": "Penghargaan & Prestasi",
-    "proudMoment": "Momen Membanggakan",
-    "universityLogoAlt": "Logo Universitas Diponegoro",
-    "proudMomentAlt": "Tim finalis Gemastik 2024",
-    "caption": "Tim FishCoin Finalis Paper Ilmiah Gemastik 2024",
-    "items": [
-      "Finalis Gemastik 2024 Scientific Paper",
-      "Menunjukkan kerja sama tim yang kuat, kreativitas, dan penerapan praktis keterampilan pengembangan web dalam lingkungan yang kompetitif."
-    ]
+    "highlightCategory": "Karya Tulis Ilmiah · Tim Fishcoin",
+    "highlightTitle": "Finalis Gemastik XVII 2024",
+    "highlightDescription": "Finalis kategori Karya Tulis Ilmiah pada GEMASTIK XVII 2024 bersama Tim Fishcoin."
   },
   "certificates": {
     "title": "Sertifikat Ekstrakurikuler",
@@ -246,17 +242,18 @@
     "link": "Tautan",
     "updatesTitle": "Jangan Lewatkan Pembaruan",
     "updatesDescription": "Dapatkan email saat ada sesuatu yang baru.",
+    "emailPlaceholder": "Alamat email Anda",
     "links": {
       "about": "Tentang",
-      "projects": "Proyek",
+      "project": "Proyek",
       "blog": "Blog",
-      "contact": "Kontak",
-      "resume": "Resume"
+      "awards": "Penghargaan",
+      "guestbook": "Buku Tamu"
     },
     "socials": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "mail": "Email"
+      "instagram": "Instagram"
     }
   }
 }
