@@ -88,55 +88,6 @@ export default async function ProjectsPage({ dictionary, language = "en" }) {
           </div>
         </div>
 
-        {/* ========================================================== */}
-        {/* FOOTER */}
-        {/* ========================================================== */}
-        <div className="bg-black/40 backdrop-blur-sm border-t border-white/10 py-12 px-4 relative z-20">
-          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-10">
-            
-            {/* Kiri: Bio & Foto */}
-            <div className="flex flex-col items-start gap-4 max-w-xs">
-              <div className="w-16 h-16 rounded-xl overflow-hidden border border-white/10 bg-white/10 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <img 
-                  src="/Profile.jpeg" 
-                  alt={content.profileAlt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-white font-medium text-lg leading-tight drop-shadow-md">
-                {dictionary?.footer?.description}
-              </p>
-            </div>
-
-            {/* Tengah: Navigation & Links */}
-            <div className="flex-1 w-full grid grid-cols-2 md:grid-cols-3 gap-10">
-              <div>
-                <h4 className="font-semibold text-white mb-4 text-sm drop-shadow-md">{content.navigation}</h4>
-                <ul className="space-y-3 text-sm text-gray-400">
-                  <li><Link href={`/${language}#about`} className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{dictionary?.footer?.links?.about}</Link></li>
-                  <li><Link href={`/${language}/projects`} className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{content.project}</Link></li>
-                  <li><Link href={`/${language}/blog`} className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{dictionary?.footer?.links?.blog}</Link></li>
-                  <li><Link href={`/${language}/contact`} className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{content.contact}</Link></li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-white mb-4 text-sm drop-shadow-md">{dictionary?.footer?.link}</h4>
-                <ul className="space-y-3 text-sm text-gray-400">
-                  <li><a href="https://github.com/salman-arya" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{content.socials.github}</a></li>
-                  <li><a href="https://linkedin.com/in/salman-arya-sandytia" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{content.socials.linkedin}</a></li>
-                  <li><a href="https://instagram.com/salman_arya" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 hover:translate-x-1 transition-all duration-300 inline-block">{content.socials.instagram}</a></li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-white mb-4 text-sm drop-shadow-md">{content.updatesTitle}</h4>
-                <p className="text-sm text-gray-400 leading-relaxed">{content.updatesDescription}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </main>
   );

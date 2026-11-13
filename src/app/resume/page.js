@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { portfolioData } from "@/data/portfolioData";
-import Footer from "@/components/Footer";
 import { getDictionary } from "@/lib/dictionary";
 
 export default async function ResumePage({ dictionary, language = "en" }) {
@@ -66,8 +65,6 @@ export default async function ResumePage({ dictionary, language = "en" }) {
             </div>
           </div>
         </div>
-
-        <Footer dictionary={activeDictionary} lang={language} />
       </div>
     </main>
   );

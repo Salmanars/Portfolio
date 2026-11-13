@@ -1,5 +1,4 @@
 import { FaArrowRight, FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import Footer from "@/components/Footer";
 
 const iconMap = {
   linkedin: <FaLinkedin className="h-6 w-6 text-white" />,
@@ -58,7 +57,6 @@ export default function ContactPage({ contact, dictionary, language = "en" }) {
           </div>
         </div>
 
-        <Footer dictionary={dictionary} lang={language} />
       </div>
     </main>
   );

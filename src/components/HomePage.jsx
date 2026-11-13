@@ -9,7 +9,6 @@ import FeaturedProjects from "./FeaturedProjects";
 import Achievements from "./Achievements";
 import Blog from "./Blog";
 import DarkModernBackground from "./DarkModernBackground";
-import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
 export default function HomePage({ dictionary, language = "en" }) {
@@ -64,9 +63,6 @@ export default function HomePage({ dictionary, language = "en" }) {
           style={{ backgroundImage: `url("${blogBackground.bottom}")` }}
         >
           <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
-          <div className="relative z-10 mx-auto max-w-6xl px-4 py-10">
-            <Footer dictionary={dictionary} language={language} />
-          </div>
         </div>
       </div>
     </main>
